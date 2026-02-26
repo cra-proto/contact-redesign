@@ -25,7 +25,7 @@ notedlinks:
   - title: "Repository sitemap"
     link: "https://cra-proto.github.io/contact-redesign/index.html"
 ---
-<style>
+
 <style>
 
 /*page structure desktop (new) */
@@ -271,8 +271,88 @@ aside.gc-nav h1 {
 	margin-right: 25px;
 }
 }
+/*alerts(new design replacement, remove -alt from all classes) */
+.alert-alt {
+	margin-left: 10px;
+	border-left: 6px solid #000;
+	padding-left: 15px;
+	background-clip: content-box;
+	margin-bottom: 23px;
+}
+.alert-alt > p, .alert-alt > .ul, .alert-alt > .ol {
+	margin-bottom: 0px;
+}
+.alert-alt>* {
+	margin-left: 15px;
+}
+.alert-alt details {
+	margin-left: 0.5em
+}
+.alert-alt >:first-child:not(details) {
+	padding-top: 15px;
+	margin-top:auto;
+}
+.alert-alt >:last-child {
+	padding-bottom: 25px;
+}
+.alert-alt:before {
+	font-size: 26px;
+	margin-left: -1.28em;
+	margin-top: 0.5em;
+	padding: 2px;
+	background-color: #fff;
+	line-height: 1.1em;
+	font-family: "Glyphicons Halflings";
+	position: absolute;
+}
+.well .alert-alt:before {
+	background-color: #f5f5f5;
+}
+.alert-info-alt {
+	border-left-color: #269abc;
+}
+.alert-success-alt {
+	border-left-color: #278400;
+}
+.alert-warning-alt {
+	border-left-color: #f90;
+}
+.alert-danger-alt {
+	border-left-color: #d3080c;
+}
+.alert-info-alt::before, details.alert-info-alt::before {
+	content: "\e086";
+	color: #269abc;
+}
+.alert-success-alt::before {
+	content: "\e084";
+	color: #278400;
+}
+.alert-warning-alt::before {
+	content: "\e107";
+	color: #f90;
+}
+.alert-danger-alt::before {
+	content: "\e101";
+	color: #d3080c;
+}
 
-  
+/* callouts (new) */
+.callout {
+	padding: 19px;
+	margin-bottom: 20px;
+	border: 1px solid #e3e3e3;
+	box-shadow: 0px 0px 10px #ddd;
+}
+.callout h2, .callout h3, .callout h3, .callout h4, .callout h5, .callout h6 {
+	margin-top: 0;
+}
+.callout p:last-of-type, .callout ul:last-of-type {
+	margin-bottom: 0;
+}
+.most-requested + .callout {
+	margin-top: 30px;
+}
 </style>
 <div class="container">
     <h1 property="name" id="wb-cont">Canada child benefit (CCB)</h1>
@@ -328,3 +408,4 @@ aside.gc-nav h1 {
 </div>
 <charlie></charlie>
 
+<script>_satellite.pageBottom();</script>
