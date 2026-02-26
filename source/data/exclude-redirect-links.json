@@ -1,7 +1,15 @@
 [
   {
+    "origin": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit.html",
+    "destination": "/contact-redesign/en/revenue-agency/services/child-family-benefits/canada-child-benefit.html"
+  },
+  {
     "origin": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit/contact.html",
     "destination": "/contact-redesign/en/revenue-agency/services/child-family-benefits/canada-child-benefit/contact.html"
+  },
+  {
+    "origin": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/segments/tax-credits-deductions-persons-disabilities/disability-tax-credit.html",
+    "destination": "/contact-redesign/en/revenue-agency/services/tax/individuals/segments/tax-credits-deductions-persons-disabilities/disability-tax-credit.html"
   },
   {
     "origin": "https://www.canada.ca/en/revenue-agency/services/tax/individuals/segments/tax-credits-deductions-persons-disabilities/disability-tax-credit/contact-dtc.html",
