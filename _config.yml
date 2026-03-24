@@ -41,6 +41,7 @@ defaults:
       type: pages
     values:
       layout: default
+      robots: "noindex, nofollow"
       lang: en
       share: true
       sitemenu: true
