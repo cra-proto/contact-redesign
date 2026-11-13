@@ -25,114 +25,19 @@ notedlinks:
 ---
 
 <style>
-
-/* style this like call-to-action button */
-.btn-default {
-  font-size: 1.1em;
-  margin-bottom: 25px;
-  margin-top: 15px;
-  padding: .58em 1em;
+summary {
+    background-color: #fff;
 }
-/* Create the indicator (the dot/circle - hidden when not checked) */
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
+details summary:focus, details summary:hover {
+    background-color: aliceblue;
 }
-/* shared components */
-
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 40px;
-  width: 40px;
-  background-color: #eee;
-  border: 2px solid #333;
+.bg-white {
+    background-color: #fff;
+    color: #333;
 }
-/* custom checkboxes */
-
-/* for checks, container */
-.container-checks {
-  display: block;
-  position: relative;
-  padding-left: 55px;
-  margin-bottom: 30px;
-  cursor: pointer;
-  font-size: 19px;
-  font-weight: normal;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-/* hide default checkbox */
-.container-checks input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-/* Show when checkbox is focus with keyboard */
-.container-checks input:focus-visible ~ .checkmark {
-    background-color: #ccc;
-    border-width: 4px;
-}
-.container-checks input:focus-visible ~ .checkmark:after {
-    left: 12px;
-    top: 3px;
-}
-/* mouse-over, grey */
-.container-checks:hover input ~ .checkmark {
-  background-color: #ccc;
-}
-.container-checks input:checked ~ .checkmark {
-  background-color: #318000;
-}
-/* create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-/* show the checkmark when checked */
-.container-checks input:checked ~ .checkmark:after {
-  display: block;
-}
-/* style the checkmark/indicator */
-.container-checks .checkmark:after {
-  left: 14px;
-  top: 5px;
-  width: 10px;
-  height: 22px;
-  border: solid white;
-  border-width: 0 4px 4px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-
-/* extend zebra strips to whole container */
-
-.edge-color {
-  background-color: #f0f0f0;
-  display: inline-block;
-  width: 100%;
-  padding-top: 0px;
-  padding-bottom: 15px;
-}
-
-/* extend zebra strips to whole container in a data table */
-
-.dataTables_wrapper {
-  margin-left: -22px;
-  margin-right: -22px;
-}
-
-.dataTables_filter {
-  margin-left: 8px;
+.btn-select {
+    background-color: transparent;
+    border-radius: 0px;
 }
 </style>
 <div class="container">
@@ -146,259 +51,36 @@ notedlinks:
 <div class="contentfragment section">
     <div class="cmp-contentfragment" data-cmp-contentfragment-model="https://www.canada.ca/content/dam/cra-arc/content-fragments/contact-faqs/jcr:content/model" data-cmp-contentfragment-path="https://www.canada.ca/content/dam/cra-arc/content-fragments/contact-faqs">
         <div class="cmp-contentfragment__element cmp-contentfragment__element--main" data-cmp-contentfragment-element-type="string">
-            <div class="edge-color">
+            <div class="well well-sm brdr-rds-0">
                 <div class="container">
-                    <p class="h3">Help with common topics</p>
-                    <h2 class="wb-inv">Answers to top questions</h2>
+                
+                    <h2 class="h3">Answers to current questions</h2>
                     <ul class="list-unstyled lst-spcd">
                         <li>
                             <div class="panel panel-info brdr-rds-0 panel-body">
                                 <div class="row">
                                     <div class="col-sm-1 hidden-xs pr-2">
-                                        <span class="fa fa-stack fa-lg text-info"><span class="far fa-circle fa-stack-2x"></span><span class="fas fa-unlock fa-stack-1x"></span></span>
+                                        <span class="fa fa-stack fa-lg text-info"><span class="far fa-circle fa-stack-2x"></span><span class="fas fa-exclamation fa-stack-1x"></span></span>
                                     </div>
                                     <div class="col-xs-12 col-sm-11 pl-2">
                                         <details class="brdr-0 brdr-rds-0 mrgn-bttm-0">
-                                            <summary class="brdr-0 brdr-rds-0" id="ccss_ccnt" role="heading" aria-level="3">Access a CRA account</summary>
+                                            <summary class="brdr-0 brdr-rds-0" id="ccss_ccnt"><h3 class="h6">Current issue here</h3></summary>
                                             <div class="px-sm-3">
-                                                <p>What problem are you having?</p>
+                                                <p>Intro text</p>
                                                 <details class="brdr-0 brdr-rds-0 px-2 mrgn-lft-md">
-                                                    <summary class="brdr-0 brdr-rds-0" id="sc">I have a problem with my CRA security code</summary>
+                                                    <summary class="brdr-0 brdr-rds-0" id="sc">Issue one</summary>
                                                     <div class="px-sm-3">
-                                                        <p>If you lost your CRA security code or it has not arrived after 10&nbsp;business days, you can instead use the document verification service to verify your identity.</p>
-                                                        <p>To use the document verification service:</p>
-                                                        <ol>
-                                                            <li>Go to the <a data-gc-analytics-customclick="CRA|ARC:ContactPageSigninButtonClick:Sign-in Services - DVS" href="https://www.canada.ca/en/revenue-agency/services/e-services/cra-login-services.html">Sign in to your CRA account</a> page and start signing in</li>
-                                                            <li>Complete the security steps and multifactor authentication</li>
-                                                            <li>When you are asked to enter your security code, select the <strong>document verification service</strong></li>
-                                                        </ol>
-                                                        <p class="mrgn-tp-md">For more details, go to <a href="https://www.canada.ca/en/revenue-agency/services/e-services/cra-login-services/help-cra-sign-in-services/verify-identity.html">Verify your identity</a>.</p>
-                                                        <details class="brdr-0 brdr-rds-0 px-2 mrgn-lft-md">
-                                                            <summary class="brdr-0 brdr-rds-0">If your CRA security code is expired</summary>
-                                                            <div class="px-sm-3">
-                                                                <p>If your CRA security code is expired, using the document verification service is the quickest way to verify your identity. Another method is to request that a new CRA security code be sent to you by mail.</p>
-                                                                <ol>
-                                                                    <li>Go to the <a data-gc-analytics-customclick="CRA|ARC:ContactPageSigninButtonClick:Sign-in Services - Need a Security Code" href="https://www.canada.ca/en/revenue-agency/services/e-services/cra-login-services.html">Sign in to your CRA account</a> page and start signing in</li>
-                                                                    <li>Complete the security steps and multifactor authentication</li>
-                                                                    <li>When you get the error message that your security code has expired, select <strong>CRA security code online</strong> or the <strong>document verification service</strong></li>
-                                                                </ol>
-                                                                <p class="mrgn-tp-md">For more details, go to <a href="https://www.canada.ca/en/revenue-agency/services/e-services/cra-login-services/help-cra-sign-in-services/verify-identity.html">Verify your identity</a>.</p>
-                                                            </div>
-                                                        </details>
-                                                        <hr class="brdr-bttm mrgn-tp-md mrgn-bttm-md" />
-                                                        <details class="brdr-0 brdr-rds-0 px-2 mrgn-lft-md">
-                                                            <summary class="brdr-0 brdr-rds-0">If you lost your code and can't use the document verification service</summary>
-                                                            <div class="px-sm-3">
-                                                                <p>You will need to call the CRA to receive another CRA security code by mail.</p>
-                                                                <p>Before you call:</p>
-                                                                <ol>
-                                                                    <li>Have your tax documents ready to validate your identity</li>
-                                                                    <li>
-                                                                        Call <strong><span class="nowrap">1-800-959-8281</span></strong>
-                                                                    </li>
-                                                                    <li>Select option&nbsp;1 for online services</li>
-                                                                </ol>
-                                                            </div>
-                                                        </details>
+                                                  <p>Issue goes here</p>
                                                     </div>
                                                 </details>
                                                 <hr class="brdr-bttm mrgn-tp-md mrgn-bttm-md" />
                                                 <details class="brdr-0 brdr-rds-0 px-2 mrgn-lft-md">
-                                                    <summary class="brdr-0 brdr-rds-0">I did not get my one-time passcode for multi-factor authentication (MFA)</summary>
+                                                    <summary class="brdr-0 brdr-rds-0">Issue two</summary>
                                                     <div class="px-sm-3">
-                                                        <p>If you did not receive your one-time passcode, you can:</p>
-                                                        <ul>
-                                                            <li>Use the third-party authenticator app if it is already set up</li>
-                                                            <li>Ask for it to be resent or sent to a different phone number that you have already enrolled</li>
-                                                            <li>Try the <strong>Call me</strong> option instead of <strong>Text me</strong> if you are using a VoIP service</li>
-                                                            <li>Use the passcode grid if you are already enrolled with that option</li>
-                                                        </ul>
-                                                        <p class="mrgn-tp-md">For more information: <a href="https://www.canada.ca/en/revenue-agency/services/e-services/cra-login-services/help-cra-sign-in-services/multi-factor-authentication.html">Multi-factor Authentication (MFA)</a></p>
-                                                        <details class="brdr-0 brdr-rds-0 px-2 mrgn-lft-md">
-                                                            <summary class="brdr-0 brdr-rds-0">If your phone number has recently changed</summary>
-                                                            <div class="px-sm-3">
-                                                                <p>If your phone number has changed and you can no longer receive your one-time passcode at that number, you can use another MFA option if you are <strong>already</strong> enrolled with that option.</p>
-                                                                <p>If you still cannot receive your one-time passcode, you will have to contact us.</p>
-                                                                <p>Before you call:</p>
-                                                                <ol>
-                                                                    <li>Have your tax documents ready to validate your identity</li>
-                                                                    <li>
-                                                                        Call <strong><span class="nowrap">1-800-959-8281</span></strong>
-                                                                    </li>
-                                                                    <li>Select option 1 for online services</li>
-                                                                </ol>
-                                                            </div>
-                                                        </details>
+                                                  <p>Issue goes here</p>
                                                     </div>
                                                 </details>
-                                                <hr class="brdr-bttm mrgn-tp-md mrgn-bttm-md" />
-                                                <details class="brdr-0 brdr-rds-0 px-2 mrgn-lft-md">
-                                                    <summary class="brdr-0 brdr-rds-0">I can’t remember my CRA user ID or password</summary>
-                                                    <div class="px-sm-3">
-                                                        <p>You can recover your CRA user ID or password online.</p>
-                                                        <details class="brdr-0 and brdr-rds-0 px-2 mrgn-lft-md">
-                                                            <summary class="brdr-0 brdr-rds-0">Recovering your user ID</summary>
-                                                            <div class="px-sm-3">
-                                                                <p>To recover your CRA user ID:</p>
-                                                                <ol>
-                                                                    <li>Go to the <a data-gc-analytics-customclick="CRA|ARC:ContactPageSigninButtonClick:MyA - CRA ID" href="https://www.canada.ca/en/revenue-agency/services/e-services/cra-login-services.html">Sign in to your CRA account</a> page</li>
-                                                                    <li>Select <strong>CRA user ID and password</strong> from the sign-in options</li>
-                                                                    <li>Select <strong>Forgot your user ID?</strong></li>
-                                                                    <li>
-                                                                        Provide the following information:
-                                                                        <ul>
-                                                                            <li>Your social insurance number (SIN)</li>
-                                                                            <li>Your date of birth</li>
-                                                                            <li>Amounts from your filed and assessed income tax and benefit return from the current or previous tax year</li>
-                                                                        </ul>
-                                                                    </li>
-                                                                    <li>Answer the security questions you set up during registration</li>
-                                                                </ol>
-                                                            </div>
-                                                        </details>
-                                                        <hr class="brdr-bttm mrgn-tp-md mrgn-bttm-md" />
-                                                        <details class="brdr-0 and brdr-rds-0 px-2 mrgn-lft-md">
-                                                            <summary class="brdr-0 brdr-rds-0">Recovering your password</summary>
-                                                            <div class="px-sm-3">
-                                                                <p>If you have forgotten your CRA password:</p>
-                                                                <ol>
-                                                                    <li>Go to the <a data-gc-analytics-customclick="CRA|ARC:ContactPageSigninButtonClick:MyA - CRA Password" href="https://www.canada.ca/en/revenue-agency/services/e-services/cra-login-services.html">Sign in to your CRA account</a> page</li>
-                                                                    <li>Select <strong>CRA user ID and password</strong> from the sign-in options</li>
-                                                                    <li>Select <strong>Forgot your password?</strong></li>
-                                                                    <li>Enter your CRA user ID</li>
-                                                                    <li>Answer the security questions you set up during registration</li>
-                                                                </ol>
-                                                            </div>
-                                                        </details>
-                                                        <hr class="brdr-bttm mrgn-tp-md mrgn-bttm-md" />
-                                                        <details class="brdr-0 and brdr-rds-0 px-2 mrgn-lft-md">
-                                                            <summary class="brdr-0 brdr-rds-0">If you still can't recover your CRA user ID or password</summary>
-                                                            <div class="px-sm-3">
-                                                                <p>If you lost access to your CRA account, going through the registration process again may help you get your access back.</p>
-                                                                <details class="brdr-0 brdr-rds-0 px-2 mrgn-lft-md mrgn-tp-md">
-                                                                    <summary class="brdr-0 brdr-rds-0">Regain access to your CRA account</summary>
-                                                                    <div class="px-sm-3" id="regain">
-                                                                        <p>You may be able to regain access to your CRA account with new sign-in information (a new credential) if:</p>
-                                                                        <ul>
-                                                                            <li>You forgot your CRA user ID or password</li>
-                                                                            <li>You forgot the answers to your security questions</li>
-                                                                            <li>Your credential was revoked</li>
-                                                                        </ul>
-                                                                        <p class="mrgn-tp-md">You will need to be able to:</p>
-                                                                        <ul>
-                                                                            <li>Use any existing MFA option you previously chose</li>
-                                                                            <li>Complete the registration process, including identity verification</li>
-                                                                        </ul>
-                                                                        <p class="mrgn-tp-md">Any previous CRA user IDs and passwords or Sign-In Partners linked to your CRA account will be removed. Provincial partner credentials will not be removed by this process.</p>
-                                                                        <p>You <strong>cannot</strong> go through the registration process to get back into your account if your account has been locked by the CRA for security or other reasons.</p>
-                                                                        <p>For more details, go to <a href="https://www.canada.ca/en/revenue-agency/services/e-services/cra-login-services/register-cra-sign-in-services.html#cant-access-account">Register for a CRA account</a>.</p>
-                                                                    </div>
-                                                                </details>
-                                                                <hr class="brdr-bttm mrgn-tp-md mrgn-bttm-md" />
-                                                                <details class="brdr-0 brdr-rds-0 px-2 mrgn-lft-md mrgn-tp-md">
-                                                                    <summary class="brdr-0 brdr-rds-0">If you have tried to register again and still cannot access your account, contact&nbsp;us</summary>
-                                                                    <div class="px-sm-3">
-                                                                        <ol>
-                                                                            <li>Have your tax documents ready to validate your identity</li>
-                                                                            <li>
-                                                                                Call <strong><span class="nowrap">1-800-959-8281</span></strong>
-                                                                            </li>
-                                                                            <li>Select option 1 for online services</li>
-                                                                        </ol>
-                                                                    </div>
-                                                                </details>
-                                                            </div>
-                                                        </details>
-                                                    </div>
-                                                </details>
-                                                <hr class="brdr-bttm mrgn-tp-md mrgn-bttm-md" />
-                                                <details class="brdr-0 brdr-rds-0 px-2 mrgn-lft-md">
-                                                    <summary class="brdr-0 brdr-rds-0">I’m having trouble with my Sign-In Partner</summary>
-                                                    <div class="px-sm-3">
-                                                        <p>Contact your <strong>financial institution</strong> if you have issues with your sign-in information.</p>
-                                                        <p><strong>To change your Sign-In Partner</strong></p>
-                                                        <p>You can switch to another Sign-In Partner as long as you still have access to the one you previously used.</p>
-                                                        <ol>
-                                                            <li>Go to the <a data-gc-analytics-customclick="CRA|ARC:ContactPageSigninButtonClick:Sign-in Services - Sign In Partner" href="https://www.canada.ca/en/revenue-agency/services/e-services/cra-login-services.html">Sign in to your CRA account</a> page</li>
-                                                            <li>Select <strong>Sign-In Partner</strong></li>
-                                                            <li>Select <strong>Switch My Sign-In Partner</strong> at the top of the page</li>
-                                                            <li>Follow the instructions</li>
-                                                        </ol>
-                                                        <details class="brdr-0 brdr-rds-0 px-2 mrgn-lft-md mrgn-tp-md">
-                                                            <summary class="brdr-0 brdr-rds-0">If you can't access your previous Sign-In Partner</summary>
-                                                            <div class="px-sm-3">
-                                                                <p>If you lost access to your CRA account, going through the registration process again may help you get your access back.</p>
-                                                                <details class="brdr-0 brdr-rds-0 px-2 mrgn-lft-md mrgn-tp-md">
-                                                                    <summary class="brdr-0 brdr-rds-0">Regain access to your CRA account</summary>
-                                                                    <div data-ajax-replace="https://www.canada.ca/content/canadasite/en/revenue-agency/corporate/contact-information.html#regain"></div>
-                                                                </details>
-                                                                <hr class="brdr-bttm mrgn-tp-md mrgn-bttm-md" />
-                                                                <details class="brdr-0 brdr-rds-0 px-2 mrgn-lft-md mrgn-tp-md">
-                                                                    <summary class="brdr-0 brdr-rds-0">If you have tried to register again and still cannot access your account, contact&nbsp;us</summary>
-                                                                    <div class="px-sm-3">
-                                                                        <ol>
-                                                                            <li>Have your tax documents ready to validate your identity</li>
-                                                                            <li>
-                                                                                Call <strong><span class="nowrap">1-800-959-8281</span></strong>
-                                                                            </li>
-                                                                            <li>Select option 1 for online services</li>
-                                                                        </ol>
-                                                                    </div>
-                                                                </details>
-                                                            </div>
-                                                        </details>
-                                                    </div>
-                                                </details>
-                                                <hr class="brdr-bttm mrgn-tp-md mrgn-bttm-md" />
-                                                <details class="brdr-0 brdr-rds-0 px-2 mrgn-lft-md">
-                                                    <summary class="brdr-0 brdr-rds-0">I’m having trouble accessing my provincial partner</summary>
-                                                    <div class="px-sm-3">
-                                                        <p>For help accessing your provincial partner, refer to:</p>
-                                                        <ul>
-                                                            <li><a href="https://www2.gov.bc.ca/gov/content/governments/government-id/bcservicescardapp">BC Services Card Login</a></li>
-                                                            <li><a href="https://www.alberta.ca/alberta-ca-account-contact">Alberta.ca Account – Contact</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </details>
-                                                <hr class="brdr-bttm mrgn-tp-md mrgn-bttm-md" />
-                                                <details class="brdr-0 brdr-rds-0 px-2 mrgn-lft-md">
-                                                    <summary class="brdr-0 brdr-rds-0">I am locked out</summary>
-                                                    <div class="px-sm-3">
-                                                        <p>If you got an error message saying you are locked out, follow the instructions in the message.</p>
-                                                        <p>If you lost access to your CRA account, going through the registration process again may help you get your access back.</p>
-                                                        <details class="brdr-0 brdr-rds-0 px-2 mrgn-lft-md mrgn-tp-md">
-                                                            <summary class="brdr-0 brdr-rds-0">Regain access to your CRA account</summary>
-                                                            <div data-ajax-replace="https://www.canada.ca/content/canadasite/en/revenue-agency/corporate/contact-information.html#regain"></div>
-                                                        </details>
-                                                        <hr class="brdr-bttm mrgn-tp-md mrgn-bttm-md" />
-                                                        <details class="brdr-0 brdr-rds-0 px-2 mrgn-lft-md">
-                                                            <summary class="brdr-0 brdr-rds-0">If you have tried to register again and still cannot access your account, contact&nbsp;us</summary>
-                                                            <div class="px-sm-3">
-                                                                <ol>
-                                                                    <li>Have the error code available</li>
-                                                                    <li>Have your tax documents ready to validate your identity</li>
-                                                                    <li>
-                                                                        Call <strong><span class="nowrap">1-800-959-8281</span></strong>
-                                                                    </li>
-                                                                    <li>Select option&nbsp;1 for online services</li>
-                                                                </ol>
-                                                            </div>
-                                                        </details>
-                                                    </div>
-                                                </details>
-                                                <hr class="brdr-bttm mrgn-tp-md mrgn-bttm-md" />
-                                                <details class="brdr-0 brdr-rds-0 px-2 mrgn-lft-md">
-                                                    <summary class="brdr-0 brdr-rds-0">I need to register for a CRA account</summary>
-                                                    <div class="px-sm-3">
-                                                        <p>If you don't have a CRA account, you may register for one. This will give you access to My Account and give you the option to add My Business Account or Represent a Client.</p>
-                                                        <ol>
-                                                            <li><a data-gc-analytics-customclick="CRA|ARC:ContactPageSigninButtonClick:Sign-in-Services - Register" href="https://www.canada.ca/en/revenue-agency/services/e-services/cra-login-services/register-cra-sign-in-services.html">Register for a CRA account</a> and access your Individual account</li>
-                                                            <li>Add a Business account (optional)</li>
-                                                            <li>Add a Representative account (optional)</li>
-                                                        </ol>
-                                                        <p class="mrgn-tp-md">If you have limited access, you will need to validate your <a href="#sc">security code</a>. This will give you full access and you will be able to add another account.</p>
-                                                    </div>
-                                                </details>
+                                       
                                             </div>
                                         </details>
                                     </div>
@@ -409,217 +91,27 @@ notedlinks:
                             <div class="panel panel-info brdr-rds-0 panel-body">
                                 <div class="row">
                                     <div class="col-sm-1 hidden-xs pr-2">
-                                        <span class="fa fa-stack fa-lg text-info"><span class="far fa-circle fa-stack-2x"></span><span class="fas fa-phone-slash fa-stack-1x"></span></span>
+                                        <span class="fa fa-stack fa-lg text-info"><span class="far fa-circle fa-stack-2x"></span><span class="fas fa-exclamation fa-stack-1x"></span></span>
                                     </div>
                                     <div class="col-xs-12 col-sm-11 pl-2">
                                         <details class="brdr-0 brdr-rds-0 mrgn-bttm-0">
-                                            <summary class="brdr-0 brdr-rds-0" role="heading" aria-level="3">If you can’t get through to us by phone</summary>
+                                            <summary class="brdr-0 brdr-rds-0" id="ccss_ccnt"><h3 class="h6">Current issue here</h3></summary>
                                             <div class="px-sm-3">
-                                                <h3 class="h4">We are directing some calls to the automated phone line</h3>
-                                                <p>Due to the volume of calls, we may direct your call to the automated service line. We’re trying to keep our average wait times to about 30&nbsp;minutes.</p>
-                                                <p><strong>What you can do using the automated line</strong></p>
-                                                <p>The automated service line can help you:</p>
-                                                <ul>
-                                                    <li>Check the status of your tax return</li>
-                                                    <li>Get an estimate on your refund amount</li>
-                                                    <li>Find out your CRA account balance</li>
-                                                </ul>
-                                                <p class="mrgn-tp-md">The automated service line is available all day <strong>except</strong> from 3&nbsp;am to 6&nbsp;am eastern (ET).</p>
-                                                <h3 class="h4">Try calling at another time</h3>
-                                                <p>If you’re not able to address your concerns using the automated line, try calling again:</p>
-                                                <ul>
-                                                    <li>At a different time of day</li>
-                                                    <li>On a different day of the week</li>
-                                                </ul>
-                                                <div class="alert alert-info mrgn-tp-lg">
-                                                    <h4 class="h5">Extended phone service during tax filing season</h4>
-                                                    <p>From March&nbsp;21 to May&nbsp;2, service representatives will be available on Saturdays from 9:00&nbsp;a.m. to 5:00&nbsp;p.m. ET to provide support relating to personal tax matters.</p>
-                                                    <p>Saturday service is limited. The full range of services will not be available during these extended hours.</p>
-                                                </div>
-                                                <h4 class="h5">Check if a representative is available</h4>
-                                                <ul>
-                                                    <li>If a wait time is provided, service representatives are available</li>
-                                                    <li>If a wait time is “Not available”, your call will be directed to the automated line</li>
-                                                </ul>
-                                                <p class="mrgn-tp-md"><a href="#assistance">Find a phone number and call again</a></p>
-                                                <p>CRA service hours are listed in ET.</p>
-                                                <h3 class="h4">Try other CRA online resources</h3>
-                                                <p>You may also find the information you need online.</p>
-                                                <ul>
-                                                    <li>Check the other “Common topics” on this page</li>
-                                                    <li>Sign in to your CRA account to check your Individual, Business or Representative account</li>
-                                                    <li>Find forms you need at <a href="https://apps.cra-arc.gc.ca/ebci/cjcf/fpos-scfp/pub/rdr?request_locale=en_CA">Ordering forms and publications</a></li>
-                                                    <li>Chat with a live representative using the online chat in your CRA account (Individual)</li>
-                                                    <li>Review the topics on the <a href="https://www.canada.ca/en/revenue-agency.html">CRA web pages</a></li>
-                                                </ul>
-                                            </div>
-                                        </details>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="panel panel-info brdr-rds-0 panel-body">
-                                <div class="row">
-                                    <div class="col-sm-1 hidden-xs pr-2">
-                                        <span class="fa fa-stack fa-lg text-info"><span class="far fa-circle fa-stack-2x"></span><span class="fas fa-hand-holding-usd fa-stack-1x"></span></span>
-                                    </div>
-                                    <div class="col-xs-12 col-sm-11 pl-2">
-                                        <details class="brdr-0 brdr-rds-0 mrgn-bttm-0">
-                                            <summary class="brdr-0 brdr-rds-0" role="heading" aria-level="3">Find out why your benefit payment is missing</summary>
-                                            <div class="px-sm-3">
-                                                <h3 class="h4">Why benefit payments stop</h3>
-                                                <p>Your payments may stop <strong>if you did not</strong>:</p>
-                                                <ul>
-                                                    <li>File your tax return</li>
-                                                    <li>Respond to a letter from the CRA about your situation</li>
-                                                    <li>
-                                                        Inform the CRA of a change in:
-                                                        <ul>
-                                                            <li>Your address</li>
-                                                            <li>Your banking information</li>
-                                                            <li>Marital status</li>
-                                                            <li>Child custody</li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                                <p class="mrgn-tp-md">Your payments may stop if <strong>your spouse or common-law partner did not</strong>:</p>
-                                                <ul>
-                                                    <li>File their tax return</li>
-                                                    <li>
-                                                        Inform the CRA of a change in:
-                                                        <ul>
-                                                            <li>Marital status</li>
-                                                            <li>Child custody</li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                                <h3 class="h4">Check your benefit information</h3>
-                                                <p>Check your CRA account to ensure that all your information is up to date.</p>
-                                                <ol>
-                                                    <li><a data-gc-analytics-customclick="CRA|ARC:ContactPageSigninButtonClick:MyA - Missing Benefit Payment" href="https://www.canada.ca/en/revenue-agency/services/e-services/cra-login-services.html">Sign in to your CRA account</a></li>
-                                                    <li>
-                                                        Select your <strong>Individual</strong> account
-                                                        <ol class="lst-lwr-alph">
-                                                            <li>Open your <strong>Mail</strong> to see if you have any pending communications</li>
-                                                            <li>Review your <strong>Profile</strong> to make sure it is up to date</li>
-                                                            <li>Check <strong>Benefit and credits</strong> to review the status of your benefits</li>
-                                                        </ol>
-                                                    </li>
-                                                </ol>
-                                                <p class="mrgn-tp-md">Review dates for CRA benefits: <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/benefit-payment-dates.html">Benefit payment dates</a></p>
-                                                <p>For details about what can affect specific payments:</p>
-                                                <ul>
-                                                    <li>
-                                                        <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/gsthstc-amount.html">GST/HST credit<span class="wb-inv">: How much you can expect to receive</span></a>
-                                                    </li>
-                                                    <li>
-                                                        <a data-gc-analytics-customclick="CRA|ARC:ContactPageSigninButtonClick:Canada Child Benefit - Missing Benefit Payment" href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview/canada-child-benefit-after-you-apply.html">Canada child benefit<span class="wb-inv">: Keep getting your payments</span></a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-carbon-rebate/when-expect-payments.html">Canada Carbon Rebate<span class="wb-inv">: When to expect your payments</span></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </details>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="panel panel-info brdr-rds-0 panel-body">
-                                <div class="row">
-                                    <div class="col-sm-1 hidden-xs pr-2">
-                                        <span class="fa fa-stack fa-lg text-info"><span class="far fa-circle fa-stack-2x"></span><span class="fas far fa-id-card fa-stack-1x"></span></span>
-                                    </div>
-                                    <div class="col-xs-12 col-sm-11 pl-2">
-                                        <details class="brdr-0 brdr-rds-0 mrgn-bttm-0">
-                                            <summary class="brdr-0 brdr-rds-0" role="heading" aria-level="3">Change your contact or banking details</summary>
-                                            <div class="px-sm-3">
-                                                <section data-ajax-replace="https://www.canada.ca/content/dam/cra-arc/includes/eservices-outage.txt#contact-outage-en"></section>
-                                                <p>You can change your information online using your CRA account.</p>
+                                                <p>Intro text</p>
                                                 <details class="brdr-0 brdr-rds-0 px-2 mrgn-lft-md">
-                                                    <summary class="brdr-0 brdr-rds-0">Change your personal information</summary>
+                                                    <summary class="brdr-0 brdr-rds-0" id="sc">Issue one</summary>
                                                     <div class="px-sm-3">
-                                                        <p>Edit your personal information in your CRA account.</p>
-                                                        <ul>
-                                                            <li><a data-gc-analytics-customclick="CRA|ARC:ContactPageSigninButtonClick:MyA - Personal info" href="https://www.canada.ca/en/revenue-agency/services/e-services/cra-login-services.html">Sign in to your CRA account</a></li>
-                                                            <li>Select your <strong>Individual</strong> account</li>
-                                                            <li>
-                                                                Go to <strong>Profile</strong> to change the following items:
-                                                                <ul>
-                                                                    <li><a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/change-your-address.html">Address</a></li>
-                                                                    <li><a href="https://www.canada.ca/en/revenue-agency/services/about-canada-revenue-agency-cra/direct-deposit/individuals.html">Direct deposit and banking</a></li>
-                                                                    <li><a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/update-your-marital-status-canada-revenue-agency.html">Marital status</a></li>
-                                                                    <li>
-                                                                        <a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/change-your-phone-number.html">Phone number</a>
-                                                                        <ul>
-                                                                            <li>To change your number for MFA: <a href="https://www.canada.ca/en/revenue-agency/services/e-services/cra-login-services/help-cra-sign-in-services/multi-factor-authentication.html">Multi-factor authentication settings</a></li>
-                                                                        </ul>
-                                                                    </li>
-                                                                    <li><a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/change-your-email.html">Email and correspondence options</a></li>
-                                                                </ul>
-                                                            </li>
-                                                        </ul>
-                                                        <p class="mrgn-tp-md">If you cannot access your CRA account, check above if you can resolve your issue in <a href="#ccss_ccnt">Access a CRA account</a>.</p>
+                                                  <p>Issue goes here</p>
                                                     </div>
                                                 </details>
                                                 <hr class="brdr-bttm mrgn-tp-md mrgn-bttm-md" />
                                                 <details class="brdr-0 brdr-rds-0 px-2 mrgn-lft-md">
-                                                    <summary class="brdr-0 brdr-rds-0">Change your business information</summary>
+                                                    <summary class="brdr-0 brdr-rds-0">Issue two</summary>
                                                     <div class="px-sm-3">
-                                                        <p>Edit your business information in your CRA account.</p>
-                                                        <ul>
-                                                            <li><a data-gc-analytics-customclick="CRA|ARC:ContactPageSigninButtonClick:MyA - Personal info" href="https://www.canada.ca/en/revenue-agency/services/e-services/cra-login-services.html">Sign in to your CRA account</a></li>
-                                                            <li>Select your <strong>Business</strong> account</li>
-                                                            <li>
-                                                                Go to <strong>Profile</strong> to change the following items:
-                                                                <ul>
-                                                                    <li><a href="https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/business-registration/maintain-business/change-address.html">Business address</a></li>
-                                                                    <li><a href="https://www.canada.ca/en/revenue-agency/services/about-canada-revenue-agency-cra/direct-deposit/individuals.html">Direct deposit and banking</a></li>
-                                                                    <li><a href="https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/business-registration/maintain-business/change-operating-name.html">Operating name</a></li>
-                                                                </ul>
-                                                            </li>
-                                                        </ul>
-                                                        <p class="mrgn-tp-md">For more information, refer to <a href="https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/changes-your-business.html">Changes to your business and CRA program accounts</a>.</p>
-                                                        <p>If you cannot access your CRA account, check above if you can resolve your issue in <a href="#ccss_ccnt">Access a CRA account</a>.</p>
+                                                  <p>Issue goes here</p>
                                                     </div>
                                                 </details>
-                                            </div>
-                                        </details>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="panel panel-info brdr-rds-0 panel-body">
-                                <div class="row">
-                                    <div class="col-sm-1 hidden-xs pr-2">
-                                        <span class="fa fa-stack fa-lg text-info"><span class="far fa-circle fa-stack-2x"></span><span class="fas fa-search-dollar fa-stack-1x"></span></span>
-                                    </div>
-                                    <div class="col-xs-12 col-sm-11 pl-2">
-                                        <details class="brdr-0 brdr-rds-0 mrgn-bttm-0">
-                                            <summary class="brdr-0 brdr-rds-0" role="heading" aria-level="3">Check the status of your tax refund</summary>
-                                            <div class="px-sm-3">
-                                                <p>How you file your personal income tax return can affect when you get your refund.</p>
-                                                <h3 class="h4">Standard processing times</h3>
-                                                <p>The CRA aims to send you a notice of assessment, as well as any refund, within the following timelines:</p>
-                                                <ul>
-                                                    <li>Online filing: 2&nbsp;weeks</li>
-                                                    <li>Mailed paper return: 12&nbsp;weeks</li>
-                                                    <li>Non-resident return: 16&nbsp;weeks</li>
-                                                </ul>
-                                                <p class="mrgn-tp-md">These timelines apply <strong>only</strong> to returns we receive <strong>on or before the due date</strong>.</p>
-                                                <h3 class="h4">Check the status of your return</h3>
-                                                <p>You may check the status of your return online using your CRA My Account.</p>
-                                                <ol>
-                                                    <li><a data-gc-analytics-customclick="CRA|ARC:ContactPageSigninButtonClick:MyA - Status of Tax Refund" href="https://www.canada.ca/en/revenue-agency/services/e-services/cra-login-services.html">Sign in to your CRA account</a></li>
-                                                    <li>Select your <strong>Individual</strong> account</li>
-                                                </ol>
-                                                <p class="mrgn-tp-md">For other options: <a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/about-your-tax-return/refunds.html#check">Check the status of your return</a></p>
-                                                <h3 class="h4">Why you may not have received your refund</h3>
-                                                <p>If you have another government debt, the CRA may have kept all or part of your refund.</p>
-                                                <p><a href="https://www.canada.ca/en/revenue-agency/services/about-canada-revenue-agency-cra/when-you-money-collections-cra/how-payments-applied-offset-debt.html">How benefits and credits can be applied to your debt</a></p>
+                                       
                                             </div>
                                         </details>
                                     </div>
@@ -634,35 +126,48 @@ notedlinks:
 </div>
 <div class="container">
     <section class="mrgn-bttm-lg">
-        <h2 class="h3">Quick links</h2>
-        <ul class="row wontact by emab-eqht-grd list-unstyled lst-spcd mrgn-tp-lg">
-            <li class="col-sm-6 col-lg-4">
-                <p><a href="https://www.canada.ca/en/services/taxes/savings-and-pension-plans.html">Registered pension and savings plans</a></p>
-            </li>
-            <li class="col-sm-6 col-lg-4">
-                <p><a href="https://www.canada.ca/en/revenue-agency/services/forms-publications.html">Forms and publications</a></p>
-            </li>
-            <li class="col-sm-6 col-lg-4">
-                <p><a href="https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/business-registration/business-number-program-account/how-register/resident.html">Register a business </a></p>
-            </li>
-            <li class="col-sm-6 col-lg-4">
-                <p><a href="https://www.canada.ca/en/revenue-agency/corporate/scams-fraud/report-scam.html">Report a scam or identity theft</a></p>
-            </li>
-            <li class="col-sm-6 col-lg-4">
-                <p><a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/segments/tax-credits-deductions-persons-disabilities/disability-tax-credit.html">Disability tax credit (DTC)</a></p>
-            </li>
-            <li class="col-sm-6 col-lg-4">
-                <p><a href="https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit-overview.html">Canada child benefit</a></p>
-            </li>
-            <li class="col-sm-6 col-lg-4">
-                <p><a href="https://www.canada.ca/en/services/taxes/income-tax/personal-income-tax/after-you-file/noa-nor.html">Get a notice of assessment</a></p>
-            </li>
-            <li class="col-sm-6 col-lg-4">
-                <p><a href="https://www.canada.ca/en/revenue-agency/services/e-services/digital-services-individuals/a-proof-income-statement-option-print.html">Get a proof of income statement</a></p>
-            </li>
-        </ul>
-        <!-- wb-eq row -->
-        <!-- row -->
+         <div  data-wb-actionmng='[
+		{ "trggroup":"clearFilter", "action": "removeClass", "source": "#first-step>.btn-select", "class": "btn-primary"}]'></div>
+
+    <fieldset><legend tabindex="-1">First question</legend>
+<div class="row wb-eqht-grd" id="first-step">
+    <div class="col-md-6 py-2">
+        <button aria-pressed="false" class="btn-select small hght-inhrt text-left" data-wb-doaction='[{ "action": "run", "trggroup": "clearFilter" },{"action": "removeClass", "source": "#second-step", "class": "hidden"}, {"action": "addClass", "class": "btn-primary"}]'>I want to <br><span class="h3 mrgn-tp-0 mrgn-bttm-0">Do this thing</span> such as, this or that</button>
+    </div>
+     <div class="col-md-6 py-2">
+        <button aria-pressed="false" class="btn-select small hght-inhrt text-left">I want to <span class="h3 mrgn-tp-0 mrgn-bttm-0">Do that thing</span> such as, this or that, or that or that</button>
+    </div>
+     <div class="col-md-6 py-2">
+        <button aria-pressed="false" class="btn-select small hght-inhrt text-left">I want to <span class="h3 mrgn-tp-0 mrgn-bttm-0">Do this other thing</span> such as, this or that</button>
+    </div>
+     <div class="col-md-6 py-2">
+        <button aria-pressed="false" class="btn-select small hght-inhrt text-left">I want to <span class="h3 mrgn-tp-0 mrgn-bttm-0">Do this something</span> such as, this or that</button>
+    </div>
+     <div class="col-md-6 py-2">
+        <button aria-pressed="false" class="btn-select small hght-inhrt text-left">I need to <span class="h3 mrgn-tp-0 mrgn-bttm-0">Do this thing</span> such as, this or that</button>
+    </div>
+    </div>
+    </fieldset>
+    <fieldset id="second-step" class="hidden fade in">
+        <legend tabindex="-1">Second question</legend>
+        <div class="row wb-eqht-grd">
+    <div class="col-md-6 py-2">
+        <button aria-pressed="false" class="btn-select small hght-inhrt text-left">I want to <br><span class="h3 mrgn-tp-0 mrgn-bttm-0">Do this thing</span> such as, this or that</button>
+    </div>
+     <div class="col-md-6 py-2">
+        <button aria-pressed="false" class="btn-select small hght-inhrt text-left">I want to <span class="h3 mrgn-tp-0 mrgn-bttm-0">Do this thing</span> such as, this or that, or that or that</button>
+    </div>
+     <div class="col-md-6 py-2">
+        <button aria-pressed="false" class="btn-select small hght-inhrt text-left">I want to <span class="h3 mrgn-tp-0 mrgn-bttm-0">Do this thing</span> such as, this or that</button>
+    </div>
+     <div class="col-md-6 py-2">
+        <button aria-pressed="false" class="btn-select small hght-inhrt text-left">I want to <span class="h3 mrgn-tp-0 mrgn-bttm-0">Do this thing</span> such as, this or that</button>
+    </div>
+     <div class="col-md-6 py-2">
+        <button aria-pressed="false" class="btn-select small hght-inhrt text-left">I want to <span class="h3 mrgn-tp-0 mrgn-bttm-0">Do this thing</span> such as, this or that</button>
+    </div>
+    </div>
+    </fieldset>
     </section>
 </div>
 <div class="edge-color">
@@ -5203,56 +4708,66 @@ notedlinks:
 
 <script>_satellite.pageBottom();</script>
 <script>
-$(".btnCheck").click(function(event) {
-    if ($('.beforeCall input[type="checkbox"]').not(':checked').length == 0) {
-        document.getElementById("check-message").innerHTML = '<div class="alert alert-success"><p>You are ready to call</p></div>';
-    } else {
-        document.getElementById("check-message").innerHTML = '<div class="alert alert-warning"><p>You need all of the above to call about an account</p></div>';
-
+    
+    $(document).ready(function() {
+          function focusNewFieldset(currentFieldset) {
+    const $nextFieldset = $(currentFieldset).closest('fieldset').next('fieldset').children('legend').focus();
+    if (!$nextFieldset.length) {
+        return;
     }
-});
 
+    const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches;
 
-// need more calls when multi phone lines are on a single page
+    $nextFieldset[0].scrollIntoView({
+        behavior: reduceMotion ? "auto" : "smooth",
+        block: "start"
+    });
+          }
+     
+              
 
-$(".btnCheck2").click(function(event) {
-    if ($('.beforeCall2 input[type="checkbox"]').not(':checked').length == 0) {
-        document.getElementById("check-message2").innerHTML = '<div class="alert alert-success"><p>You are ready to call</p></div>';
-    } else {
-        document.getElementById("check-message2").innerHTML = '<div class="alert alert-warning"><p>You need all of the above to call about an account</p></div>';
+            $('button').click(function() {
+               
+        const selectedRadio = this;
+        const currentFieldset = selectedRadio.closest("fieldset");
 
-    }
-});
+      
 
-$(".btnCheck3").click(function(event) {
-    if ($('.beforeCall3 input[type="checkbox"]').not(':checked').length == 0) {
-        document.getElementById("check-message3").innerHTML = '<div class="alert alert-success"><p>You are ready to call</p></div>';
-    } else {
-        document.getElementById("check-message3").innerHTML = '<div class="alert alert-warning"><p>You need all of the above to call about an account</p></div>';
+        // The marker is only needed for this change.
+      
 
-    }
-});
-
-
-$(".btnCheck4").click(function(event) {
-    if ($('.beforeCall4 input[type="checkbox"]').not(':checked').length == 0) {
-        document.getElementById("check-message4").innerHTML = '<div class="alert alert-success"><p>You are ready to call</p></div>';
-    } else {
-        document.getElementById("check-message4").innerHTML = '<div class="alert alert-warning"><p>You need all of the above to call about an account</p></div>';
-
-    }
-});
-
-$(".btnCheck5").click(function(event) {
-    if ($('.beforeCall5 input[type="checkbox"]').not(':checked').length == 0) {
-        document.getElementById("check-message5").innerHTML = '<div class="alert alert-success"><p>You are ready to call</p></div>';
-    } else {
-        document.getElementById("check-message5").innerHTML = '<div class="alert alert-warning"><p>You need all of the above to call about an account</p></div>';
-
-    }
-});
-
-</script>
+        setTimeout(function () {
+            focusNewFieldset(
+                currentFieldset
+            );
+        }, 500);
+                 $("legend").on("focus", function() {
+           // $(this).attr("tabindex", "0");
+                $(this).css("background-color", "#e0f7fa");
+            }).on("blur", function() {
+                $(this).css("background-color", "");
+            });
+                
+    });
+                
+          });
+                
+                
+           /*    setTimeout(() => {
+        $(this).closest('fieldset').next('fieldset').children('legend').focus(); // Change focus
+         }, 500);
+            });
+            // Optional: highlight when focused
+            $("legend").on("focus", function() {
+           // $(this).attr("tabindex", "0");
+                $(this).css("background-color", "#e0f7fa");
+            }).on("blur", function() {
+                $(this).css("background-color", "");
+            });
+        });*/
+    </script> 
 <script>
 		$('span[data-json-replace]').on("wb-contentupdated", function (event, data) {
 		 let obj;
