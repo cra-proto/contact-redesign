@@ -2,7 +2,7 @@
     
     $(document).ready(function() {
           function focusNewFieldset(currentFieldset) {
-    const $nextFieldset = $(currentFieldset).closest('fieldset:not(.hidden)').next('fieldset:not(.hidden)').children('legend').focus();
+    const $nextFieldset = $(currentFieldset).closest('fieldset').nextAll('fieldset:not(.hidden)').first().children('legend').focus();
     if (!$nextFieldset.length) {
         return;
     }
