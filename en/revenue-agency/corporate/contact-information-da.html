@@ -31,6 +31,8 @@ script: "https://cra-test-arc.canada.ca/contact-redesign/en/revenue-agency/corpo
 .btn-select {
     background-color: transparent;
     border-radius: 0px;
+	line-height:0.8;
+	padding-bottom: 10px;
 }
 </style>
 <div class="container">
@@ -119,22 +121,23 @@ script: "https://cra-test-arc.canada.ca/contact-redesign/en/revenue-agency/corpo
 </div>
 <div class="container">
     <section class="mrgn-bttm-xl">
-         <div  data-wb-actionmng='[
-		{ "trggroup":"clearFilter", "action": "removeClass", "source": "#first-step>.btn-select", "class": "btn-primary"}]'></div>
 
-    <fieldset><legend tabindex="-1">What do you want to do?</legend>
+
+    <fieldset id="start"  data-wb-actionmng='[
+		{ "trggroup":"clearFilter1", "action": "removeClass", "source": "#start>.btn-select", "class": "btn-primary"}, { "trggroup":"clearFilter1", "action": addClass", "source": "#start~fieldset", "class": "hidden"}]'>
+		<legend tabindex="-1">What do you want to do?</legend>
 <div class="row wb-eqht-grd" id="first-step">
     <div class="col-md-6 py-2">
         <button aria-pressed="false" class="btn-select small hght-inhrt text-left"><span class="h3 mrgn-tp-0 mrgn-bttm-0">Access your CRA account information</span> <br>additional text here</button>
     </div>
      <div class="col-md-6 py-2">
-        <button aria-pressed="false" class="btn-select small hght-inhrt text-left"><span class="h3 mrgn-tp-0 mrgn-bttm-0">Review or change your CRA information</span> <br>additonal text here</button>
+        <button aria-pressed="false" class="btn-select small hght-inhrt text-left"  data-wb-doaction='[{ "action": "run", "trggroup": "clearFilter1" },{"action": "removeClass", "source": "#information", "class": "hidden"}, {"action": "addClass", "class": "btn-primary"}]'><span class="h3 mrgn-tp-0 mrgn-bttm-0">Review or change your CRA information</span> <br>additonal text here</button>
     </div>
      <div class="col-md-6 py-2">
         <button aria-pressed="false" class="btn-select small hght-inhrt text-left"><span class="h3 mrgn-tp-0 mrgn-bttm-0">Understand your taxes, benefits and credits</span> <br>additonal text here</button>
     </div>
      <div class="col-md-6 py-2">
-        <button aria-pressed="false" class="btn-select small hght-inhrt text-left" data-wb-doaction='[{ "action": "run", "trggroup": "clearFilter" },{"action": "removeClass", "source": "#payments", "class": "hidden"}, {"action": "addClass", "class": "btn-primary"}]'><span class="h3 mrgn-tp-0 mrgn-bttm-0">Payments</span> <br>additonal text here</button>
+        <button aria-pressed="false" class="btn-select small hght-inhrt text-left" data-wb-doaction='[{ "action": "run", "trggroup": "clearFilter1" },{"action": "removeClass", "source": "#payments", "class": "hidden"}, {"action": "addClass", "class": "btn-primary"}]'><span class="h3 mrgn-tp-0 mrgn-bttm-0">Payments</span> <br>additonal text here</button>
     </div>
      <div class="col-md-6 py-2">
         <button aria-pressed="false" class="btn-select small hght-inhrt text-left"><span class="h3 mrgn-tp-0 mrgn-bttm-0">Send or receive documents</span> <br>additional text here</button>
@@ -147,18 +150,53 @@ script: "https://cra-test-arc.canada.ca/contact-redesign/en/revenue-agency/corpo
     </div>
     </div>
     </fieldset>
-    <fieldset id="payments" class="hidden fade in">
+    <fieldset id="payments" class="hidden fade in" data-wb-actionmng='[
+		{ "trggroup":"clearFilter2", "action": "removeClass", "source": "#payments>.btn-select", "class": "btn-primary"}, { "trggroup":"clearFilter2", "action": addClass", "source": "#payments~fieldset", "class": "hidden"}]'>
         <legend tabindex="-1">What kind of payment do you need help with?</legend>
         <div class="row wb-eqht-grd">
     <div class="col-md-6 py-2">
-        <button aria-pressed="false" class="btn-select small hght-inhrt text-left"><span class="h3 mrgn-tp-0 mrgn-bttm-0">The CRA sending you money</span> <br>additional text here</button>
+        <button aria-pressed="false" class="btn-select small hght-inhrt text-left" ><span class="h3 mrgn-tp-0 mrgn-bttm-0">The CRA is sending you money</span> <br>additional text here</button>
     </div>
      <div class="col-md-6 py-2">
-        <button aria-pressed="false" class="btn-select small hght-inhrt text-left"><span class="h3 mrgn-tp-0 mrgn-bttm-0">You are sending, or sent the CRA money</span> <br>additional text here</button>
+        <button aria-pressed="false" class="btn-select small hght-inhrt text-left"  data-wb-doaction='[{ "action": "run", "trggroup": "clearFilter2" },{"action": "removeClass", "source": "#payments-send", "class": "hidden"}, {"action": "addClass", "class": "btn-primary"}]'><span class="h3 mrgn-tp-0 mrgn-bttm-0">You are sending, or sent the CRA money</span> <br>additional text here</button>
     </div>
     
     </div>
     </fieldset>
+<fieldset id="payments-send" class="hidden fade in" data-wb-actionmng='[
+		{ "trggroup":"clearFilter3", "action": "removeClass", "source": "#payments-send>.btn-select", "class": "btn-primary"}, { "trggroup":"clearFilter3", "action": addClass", "source": "#payments-send~fieldset", "class": "hidden"}]'>
+        <legend tabindex="-1">What do you need help with regarding sending money or sent money to the CRA?</legend>
+        <div class="row wb-eqht-grd">
+    <div class="col-md-6 py-2">
+        <button aria-pressed="false" class="btn-select small hght-inhrt text-left"><span class="h3 mrgn-tp-0 mrgn-bttm-0">The right payment method</span> <br>additional text here</button>
+    </div>
+     <div class="col-md-6 py-2">
+        <button aria-pressed="false" class="btn-select small hght-inhrt text-left"><span class="h3 mrgn-tp-0 mrgn-bttm-0">Due date for the amount owed</span> <br>additional text here</button>
+    </div>
+      <div class="col-md-6 py-2">
+        <button aria-pressed="false" class="btn-select small hght-inhrt text-left"><span class="h3 mrgn-tp-0 mrgn-bttm-0">Confirming or correcting a payment</span> <br>additional text here</button>
+    </div>
+			  <div class="col-md-6 py-2">
+        <button aria-pressed="false" class="btn-select small hght-inhrt text-left"><span class="h3 mrgn-tp-0 mrgn-bttm-0">Paying a debt over time</span> <br>additional text here</button>
+    </div>
+    </div>
+    </fieldset>
+
+  <fieldset id="information" class="hidden fade in" data-wb-actionmng='[
+		{ "trggroup":"clearFilter4", "action": "removeClass", "source": "#information>.btn-select", "class": "btn-primary"}, {"trggroup":"clearFilter4", "action": addClass", "source": "#information~fieldset", "class": "hidden"}]'>
+        <legend tabindex="-1">What do you want to do regarding your information</legend>
+        <div class="row wb-eqht-grd">
+    <div class="col-md-6 py-2">
+        <button aria-pressed="false" class="btn-select small hght-inhrt text-left" ><span class="h3 mrgn-tp-0 mrgn-bttm-0">Add or change information</span> <br>additional text here</button>
+    </div>
+     <div class="col-md-6 py-2">
+        <button aria-pressed="false" class="btn-select small hght-inhrt text-left"><span class="h3 mrgn-tp-0 mrgn-bttm-0">Update on the status of my request</span> <br>additional text here</button>
+    </div>
+    
+    </div>
+    </fieldset>
+
+		
     </section>
 </div>
 <div class="well well-sm brdr-rds-0">
