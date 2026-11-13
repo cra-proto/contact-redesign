@@ -2,7 +2,7 @@
     
     $(document).ready(function() {
           function focusNewFieldset(currentFieldset) {
-    const $nextFieldset = $(currentFieldset).closest('fieldset').next('fieldset').children('legend').focus();
+    const $nextFieldset = $(currentFieldset).closest('fieldset:not(.hidden)').next('fieldset:not(.hidden)').children('legend').focus();
     if (!$nextFieldset.length) {
         return;
     }
@@ -22,7 +22,7 @@
             $('button').click(function() {
                
         const selectedRadio = this;
-        const currentFieldset = selectedRadio.closest("fieldset");
+        const currentFieldset = selectedRadio.closest("fieldset:not(.hidden)");
 
       
 
