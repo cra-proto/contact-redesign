@@ -118,47 +118,45 @@ script: "https://cra-test-arc.canada.ca/contact-redesign/en/revenue-agency/corpo
     </div>
 </div>
 <div class="container">
-    <section class="mrgn-bttm-lg">
+    <section class="mrgn-bttm-xl">
          <div  data-wb-actionmng='[
 		{ "trggroup":"clearFilter", "action": "removeClass", "source": "#first-step>.btn-select", "class": "btn-primary"}]'></div>
 
-    <fieldset><legend tabindex="-1">First question</legend>
+    <fieldset><legend tabindex="-1">What do you want to do?</legend>
 <div class="row wb-eqht-grd" id="first-step">
     <div class="col-md-6 py-2">
-        <button aria-pressed="false" class="btn-select small hght-inhrt text-left" data-wb-doaction='[{ "action": "run", "trggroup": "clearFilter" },{"action": "removeClass", "source": "#second-step", "class": "hidden"}, {"action": "addClass", "class": "btn-primary"}]'>I want to <br><span class="h3 mrgn-tp-0 mrgn-bttm-0">Do this thing</span> such as, this or that</button>
+        <button aria-pressed="false" class="btn-select small hght-inhrt text-left"><span class="h3 mrgn-tp-0 mrgn-bttm-0">Access your CRA account information</span> <br>additional text here</button>
     </div>
      <div class="col-md-6 py-2">
-        <button aria-pressed="false" class="btn-select small hght-inhrt text-left">I want to <span class="h3 mrgn-tp-0 mrgn-bttm-0">Do that thing</span> such as, this or that, or that or that</button>
+        <button aria-pressed="false" class="btn-select small hght-inhrt text-left"><span class="h3 mrgn-tp-0 mrgn-bttm-0">Review or change your CRA information</span> <br>additonal text here</button>
     </div>
      <div class="col-md-6 py-2">
-        <button aria-pressed="false" class="btn-select small hght-inhrt text-left">I want to <span class="h3 mrgn-tp-0 mrgn-bttm-0">Do this other thing</span> such as, this or that</button>
+        <button aria-pressed="false" class="btn-select small hght-inhrt text-left"><span class="h3 mrgn-tp-0 mrgn-bttm-0">Understand your taxes, benefits and credits</span> <br>additonal text here</button>
     </div>
      <div class="col-md-6 py-2">
-        <button aria-pressed="false" class="btn-select small hght-inhrt text-left">I want to <span class="h3 mrgn-tp-0 mrgn-bttm-0">Do this something</span> such as, this or that</button>
+        <button aria-pressed="false" class="btn-select small hght-inhrt text-left" data-wb-doaction='[{ "action": "run", "trggroup": "clearFilter" },{"action": "removeClass", "source": "#payments", "class": "hidden"}, {"action": "addClass", "class": "btn-primary"}]'><span class="h3 mrgn-tp-0 mrgn-bttm-0">Payments</span> <br>additonal text here</button>
     </div>
      <div class="col-md-6 py-2">
-        <button aria-pressed="false" class="btn-select small hght-inhrt text-left">I need to <span class="h3 mrgn-tp-0 mrgn-bttm-0">Do this thing</span> such as, this or that</button>
+        <button aria-pressed="false" class="btn-select small hght-inhrt text-left"><span class="h3 mrgn-tp-0 mrgn-bttm-0">Send or receive documents</span> <br>additional text here</button>
+    </div>
+	 <div class="col-md-6 py-2">
+        <button aria-pressed="false" class="btn-select small hght-inhrt text-left"><span class="h3 mrgn-tp-0 mrgn-bttm-0">Business topics</span> <br>additional text here</button>
+    </div>
+	 <div class="col-md-6 py-2">
+        <button aria-pressed="false" class="btn-select small hght-inhrt text-left"><span class="h3 mrgn-tp-0 mrgn-bttm-0">None of the above</span> <br>additional text here</button>
     </div>
     </div>
     </fieldset>
-    <fieldset id="second-step" class="hidden fade in">
-        <legend tabindex="-1">Second question</legend>
+    <fieldset id="payments" class="hidden fade in">
+        <legend tabindex="-1">What kind of payment do you need help with?</legend>
         <div class="row wb-eqht-grd">
     <div class="col-md-6 py-2">
-        <button aria-pressed="false" class="btn-select small hght-inhrt text-left">I want to <br><span class="h3 mrgn-tp-0 mrgn-bttm-0">Do this thing</span> such as, this or that</button>
+        <button aria-pressed="false" class="btn-select small hght-inhrt text-left"><span class="h3 mrgn-tp-0 mrgn-bttm-0">The CRA sending you money</span> <br>additional text here</button>
     </div>
      <div class="col-md-6 py-2">
-        <button aria-pressed="false" class="btn-select small hght-inhrt text-left">I want to <span class="h3 mrgn-tp-0 mrgn-bttm-0">Do this thing</span> such as, this or that, or that or that</button>
+        <button aria-pressed="false" class="btn-select small hght-inhrt text-left"><span class="h3 mrgn-tp-0 mrgn-bttm-0">You are sending, or sent the CRA money</span> <br>additional text here</button>
     </div>
-     <div class="col-md-6 py-2">
-        <button aria-pressed="false" class="btn-select small hght-inhrt text-left">I want to <span class="h3 mrgn-tp-0 mrgn-bttm-0">Do this thing</span> such as, this or that</button>
-    </div>
-     <div class="col-md-6 py-2">
-        <button aria-pressed="false" class="btn-select small hght-inhrt text-left">I want to <span class="h3 mrgn-tp-0 mrgn-bttm-0">Do this thing</span> such as, this or that</button>
-    </div>
-     <div class="col-md-6 py-2">
-        <button aria-pressed="false" class="btn-select small hght-inhrt text-left">I want to <span class="h3 mrgn-tp-0 mrgn-bttm-0">Do this thing</span> such as, this or that</button>
-    </div>
+    
     </div>
     </fieldset>
     </section>
