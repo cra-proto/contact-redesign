@@ -34,12 +34,12 @@
                 currentFieldset
             );
         }, 500);
-                 $("legend").on("focus", function() {
+              //   $("legend").on("focus", function() {
            // $(this).attr("tabindex", "0");
-                $(this).css("background-color", "#e0f7fa");
-            }).on("blur", function() {
-                $(this).css("background-color", "");
-            });
+             //   $(this).css("background-color", "#e0f7fa");
+        //    }).on("blur", function() {
+          //      $(this).css("background-color", "");
+         //   });
                 
     });
                 
