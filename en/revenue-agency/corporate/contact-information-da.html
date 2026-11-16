@@ -174,7 +174,7 @@ script: "https://cra-test-arc.canada.ca/contact-redesign/en/revenue-agency/corpo
         <button aria-pressed="false" class="btn-select small hght-inhrt text-left"><span class="h3 mrgn-tp-0 mrgn-bttm-0">Due date for the amount owed</span> <br>additional text here</button>
     </div>
       <div class="col-md-6 py-2">
-        <button aria-pressed="false" class="btn-select small hght-inhrt text-left"><span class="h3 mrgn-tp-0 mrgn-bttm-0">Confirming or correcting a payment</span> <br>additional text here</button>
+        <button aria-pressed="false" class="btn-select small hght-inhrt text-left"  data-wb-doaction='[{ "action": "run", "trggroup": "clearFilter3" },{"action": "removeClass", "source": "#payments-confirm-correct", "class": "hidden"}, {"action": "addClass", "class": "btn-primary"}]'><span class="h3 mrgn-tp-0 mrgn-bttm-0">Confirming or correcting a payment</span> <br>additional text here</button>
     </div>
 			  <div class="col-md-6 py-2">
         <button aria-pressed="false" class="btn-select small hght-inhrt text-left"><span class="h3 mrgn-tp-0 mrgn-bttm-0">Paying a debt over time</span> <br>additional text here</button>
@@ -196,6 +196,11 @@ script: "https://cra-test-arc.canada.ca/contact-redesign/en/revenue-agency/corpo
     </div>
     </fieldset>
 
+  <fieldset id="payments-confirm-correct" class="hidden fade in">
+        <legend tabindex="-1">Result</legend>
+        <p>Result goes here.</p>
+    </fieldset>
+		
 		
     </section>
 </div>
