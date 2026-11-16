@@ -113,7 +113,7 @@ notedlinks:
     <section class="mrgn-bttm-xl">
 
 <form>
-   <div class="wb-fieldflow"  data-wb-fieldflow='{"noForm": true, "isoptional": true, "renderas": "radio", "gcChckbxrdio": true, "base": {"isoptional": true, "renderas": "radio", "gcChckbxrdio": true}}'>
+   <div class="wb-fieldflow"  data-wb-fieldflow='{"noForm": true, "isoptional": true, "renderas": "radio", "gcChckbxrdio": true, "base": {"isoptional": true, "renderas": "radio", "gcChckbxrdio": true, "live": true}}'>
   <p>What do you want to do?</p>  
 <ul>
   <li>Access or change your CRA information or account </li>
@@ -131,7 +131,7 @@ notedlinks:
               <ul>
                 <li>The right payment method for the amount owed</li>
                 <li>Due date for the amount owed</li>
-                <li>Confirming or correcting a payment </li>
+                <li data-wb-fieldflow='{"action": "toggle", "toggle": "#payments-confirm-correct"}'>Confirming or correcting a payment </li>
                 <li>Paying a debt over time</li>
               </ul>
             </div>
@@ -139,13 +139,25 @@ notedlinks:
       </ul>
     </div>
     </li>
- 
   <li>Sending or receiving documentation</li>
   <li>Business topics</li>
   <li>None of the above</li>
 </ul>
     </div>
 </form>
+
+		<div aria-live="polite">
+		<div id="payments-confirm-correct" class="hidden fade in">
+			<div class="panel brdr-rds-0 panel-info" role="region" aria-label="Answer">
+                <header class="panel-heading max-content brdr-rght brdr-bttm brdr-rds-0">
+                    <h3 class="panel-title">Result</h3>
+                </header>
+                <div class="panel-body">
+               <p>Result goes here.</p>    
+                </div>
+            </div>
+		</div>
+		</div>
 		
     </section>
 </div>
