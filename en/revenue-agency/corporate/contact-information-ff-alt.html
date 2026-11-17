@@ -30,20 +30,18 @@ script: "https://cra-test-arc.canada.ca/contact-redesign/en/revenue-agency/corpo
   
     {background-color: blue;} */
     
-fieldset
-       {
-      display:grid;
-           grid-template-columns: repeat(1, minmax(0, 1fr));
-           column-gap: 10px;
-       }
+fieldset {
+	column-gap: 10px;
+	display:grid;
+	grid-template-columns: repeat(1, minmax(0, 1fr));
+}
  @media screen and (min-width: 768px) {    
-                   #q1a fieldset
-       {
-      display:grid;
-           grid-template-columns: repeat(2, minmax(0, 1fr));
-           column-gap: 10px;
-       }
-       } 
+	 fieldset {
+		 column-gap: 10px;
+		 display:grid;
+		 grid-template-columns: repeat(2, minmax(0, 1fr));
+	 }
+ } 
        
     
 
