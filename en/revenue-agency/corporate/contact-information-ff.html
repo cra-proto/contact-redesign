@@ -122,8 +122,9 @@ notedlinks:
 <div class="container">
     <section class="bg-white">
 <h2 class="mrgn-tp-0">Find an answer to common issues</h2>
-<form id="ff-contact" class="hidden">
-   <div class="wb-fieldflow"  data-wb-fieldflow='{"noForm": true, "isoptional": true, "renderas": "radio", "gcChckbxrdio": true, "unhideelm": "#ff-contact", "base": {"isoptional": true, "renderas": "radio", "gcChckbxrdio": true, "live": true}}'>
+<p class="h3" id="loading"><span class="fas fa-spinner fa-pulse mrgn-rght-sm">Loading</span>
+		<form id="ff-contact" class="hidden">
+   <div class="wb-fieldflow"  data-wb-fieldflow='{"noForm": true, "isoptional": true, "renderas": "radio", "gcChckbxrdio": true, "unhideelm": "#ff-contact", "hideelm": "#loading", "base": {"isoptional": true, "renderas": "radio", "gcChckbxrdio": true, "live": true}}'>
   <p>What do you want to do?</p>  
 <ul>
   <li>Access or change your CRA information or account </li>
@@ -180,7 +181,7 @@ notedlinks:
 	<h2 class="modal-title">Result</h2>
 </header>
 <div class="modal-body container">
-	<div class="wb-tabs">
+	<div class="wb-tabs ignore-session">
             <div class="tabpanels">
                 <details id="details-panel1" class="wb-details-close">
                     <summary class="py-3"><span class="px-3 center-block"><span class="fas fa-lg fa-desktop px-1"></span><br class="hidden-xs hidden-sm">
