@@ -26,6 +26,13 @@ script: "https://cra-test-arc.canada.ca/contact-redesign/en/revenue-agency/corpo
 ---
 
 <style>
+
+		.bg-white {background-color: #fff;
+			
+			   padding: 20px;
+			   margin-top: 25px;
+			   margin-bottom: 25px;
+			  }
 /*div[id*=wb-auto]:has(#next1)  
   
     {background-color: blue;} */
@@ -123,7 +130,7 @@ input[type=radio] {
 <div class="contentfragment section">
     <div class="cmp-contentfragment" data-cmp-contentfragment-model="https://www.canada.ca/content/dam/cra-arc/content-fragments/contact-faqs/jcr:content/model" data-cmp-contentfragment-path="https://www.canada.ca/content/dam/cra-arc/content-fragments/contact-faqs">
         <div class="cmp-contentfragment__element cmp-contentfragment__element--main" data-cmp-contentfragment-element-type="string">
-            <div class="well well-sm brdr-rds-0">
+          
                 <div class="container">
                 
                     <h2 class="mrgn-tp-0">Answers to current questions</h2>
@@ -192,13 +199,13 @@ input[type=radio] {
                         </li>
                     </ul>
                 </div>
-            </div>
         </div>
     </div>
 </div>
+  <div class="well well-sm brdr-rds-0">
 <div class="container">
-    <section class="mrgn-bttm-xl">
-
+    <section class="bg-white">
+<h2 class="mrgn-tp-0">Find an answer to common issues</h2>
 <form>
    <div class="wb-fieldflow"  data-wb-fieldflow='{"noForm": true, "isoptional": true, "renderas": "radio", "base": {"isoptional": true, "renderas": "radio", "live": true}}'>
   <p>What do you want to do?</p>  
@@ -248,11 +255,12 @@ input[type=radio] {
 		
     </section>
 </div>
-<div class="well well-sm brdr-rds-0">
+  </div>
+
 <div class="container">
 	
-    <h2 id="assistance" class="mrgn-tp-0">Assistance by phone</h2>
- <details><summary>Assistance by phone</summary>
+    <h2 id="assistance" class="wb-inv">Assistance by phone</h2>
+ <details class="max-content"><summary><span class="fas fa-phone-alt mrgn-rght-sm"></span>Assistance by phone</summary>
   <h3>Step 1. If you’re calling about your account, have the following information ready</h3>
     <div class="mrgn-tp-lg beforeCall">
         <label for="input1" class="container-checks"> <input id="input1" class="btnCheck" type="checkbox" /> Social Insurance Number (or business number) <span class="checkmark"></span> </label>
@@ -269,7 +277,7 @@ input[type=radio] {
  <p>List of phone numbers here</p>
  </details>  
 </div>
-</div>
+
 <charlie></charlie>
 <!--<section id="interac" class="mfp-hide modal-dialog modal-content overlay-def">
 	<header class="modal-header">
