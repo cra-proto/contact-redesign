@@ -4,7 +4,7 @@
         .next('fieldset');
 //If not fieldset scroll, target results
     if (!$target.length) {
-        $target = $('#results');
+        $target = $('.results');
     }
 //If neither, stop here
     if (!$target.length) {
@@ -33,7 +33,7 @@ $(document).ready(function () {
             // mouse, touch, or pen
             console.log("Mouse/Finger/Pen click detected");
              const selectedRadio = this;
-        const currentFieldset = selectedRadio.closest("fieldset, #results");
+        const currentFieldset = selectedRadio.closest("fieldset, .results");
              setTimeout(function () {
             focusNewFieldset(
                 currentFieldset
