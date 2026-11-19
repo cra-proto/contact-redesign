@@ -42,6 +42,9 @@ fieldset {
 	display:grid;
 	grid-template-columns: repeat(1, minmax(0, 1fr));
 }
+fieldset.wb-fieldflow-init, .results {
+	scroll-margin-bottom: 2em;
+}
  @media screen and (min-width: 768px) {    
 	 fieldset {
 		 column-gap: 10px;
@@ -246,7 +249,7 @@ input[type=radio] {
 </form>
 
 		<div aria-live="polite">
-		<div id="payments-confirm-correct" class="hidden fade in">
+		<div id="payments-confirm-correct" class="hidden fade in results">
 			<div class="panel brdr-rds-0 panel-info" role="region" aria-label="Answer">
                 <header class="panel-heading max-content brdr-rght brdr-bttm brdr-rds-0">
                     <h3 class="panel-title">Result</h3>
