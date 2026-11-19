@@ -13,7 +13,7 @@
 
     $nextFieldset[0].scrollIntoView({
         behavior: reduceMotion ? "auto" : "smooth",
-        block: "start"
+        block: "end"
     });
           }
      
