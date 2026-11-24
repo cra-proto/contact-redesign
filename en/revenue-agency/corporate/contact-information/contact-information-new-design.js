@@ -26,7 +26,7 @@
     
     $( ".wb-fieldflow" ).on( "wb-ready.wb-fieldflow", function( event ) {
 $(document).ready(function () {
-    $(document).on('click keydown', 'input[type="radio"]', function(e) {
+    $(document).on('click keydown', '.radio, input[type="radio"]', function(e) {
         const oe = e.originalEvent;
 
         if (oe && oe.pointerType || e.key === "Tab") {
