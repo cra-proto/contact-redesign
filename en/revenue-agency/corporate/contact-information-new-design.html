@@ -26,7 +26,17 @@ script: "https://cra-test-arc.canada.ca/contact-redesign/en/revenue-agency/corpo
 ---
 
 <style>
+body.wb-modal {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+}
 
+.mfp-wrap {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+}
 		.bg-white {background-color: #fff;
 			
 			   padding: 20px;
