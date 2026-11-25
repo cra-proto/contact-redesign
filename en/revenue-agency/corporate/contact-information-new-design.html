@@ -64,10 +64,10 @@ body.wb-modal {
 		 display:grid;
 		 grid-template-columns: repeat(2, minmax(0, 1fr));
 		  grid-auto-rows: 1fr;
-		 grid-template-rows: auto;
+		 grid-template-rows: repeat(3, minmax(0, 1fr));
 	 }
 #interactive-contact fieldset:first-of-type>legend {grid-column: 1/3;}
-	 
+	#interactive-contact fieldset:first-of-type>.radio:last-child {grid-column: 1/3;} 
  } 
        
     
