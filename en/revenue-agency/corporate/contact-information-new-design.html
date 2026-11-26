@@ -232,9 +232,9 @@ body.wb-modal {
    <div class="wb-fieldflow"  data-wb-fieldflow='{"noForm": true, "isoptional": true, "renderas": "radio", "unhideelm": "#interactive-contact", "hideelm": "#loading", "base": {"isoptional": true, "renderas": "radio", "gcChckbxrdio": true, "live": true}}'>
   <p>What do you want to do?</p>  
 <ul>
-  <li><span class="pull-left col-xs-3 max-content p-0"><span class="fa-stack fa-2x icon-display text-muted mrgn-tp-md"><span class="far fa-square fa-stack-2x" style="transform: rotate(45deg)"></span><span class="fas fa-user-lock fa-sm fa-stack-1x"></span></span></span><span class="pull-left col-xs-9 h3 mrgn-tp-md mrgn-bttm-0">Get help accessing your CRA account</span></li>
-  <li><span class="pull-left col-xs-3 max-content p-0"><span class="fa-stack fa-2x icon-display text-muted mrgn-tp-md"><span class="far fa-square fa-stack-2x" style="transform: rotate(45deg)"></span><span class="fas far fa-id-card fa-stack-1x"></span></span></span><span class="pull-left col-xs-9 h3 mrgn-tp-md mrgn-bttm-0">Check status or update information</span></li>
-  <li><span class="pull-left col-xs-3 max-content p-0"><span class="fa-stack fa-2x icon-display text-muted mrgn-tp-md"><span class="far fa-square fa-stack-2x" style="transform: rotate(45deg)"></span><span class="fas fa-hand-holding-usd fa-stack-1x"></span></span></span><span class="pull-left col-xs-9 h3 mrgn-tp-md mrgn-bttm-0">Get help with taxes, benefits, credits and savings plans</span></li>
+  <li data-wb-fieldflow='{"action": "append", "source": "#end-results"}'><span class="pull-left col-xs-3 max-content p-0"><span class="fa-stack fa-2x icon-display text-muted mrgn-tp-md"><span class="far fa-square fa-stack-2x" style="transform: rotate(45deg)"></span><span class="fas fa-user-lock fa-sm fa-stack-1x"></span></span></span><span class="pull-left col-xs-9 h3 mrgn-tp-md mrgn-bttm-0">Get help accessing your CRA account</span></li>
+  <li data-wb-fieldflow='{"action": "append", "source": "#end-results"}'><span class="pull-left col-xs-3 max-content p-0"><span class="fa-stack fa-2x icon-display text-muted mrgn-tp-md"><span class="far fa-square fa-stack-2x" style="transform: rotate(45deg)"></span><span class="fas far fa-id-card fa-stack-1x"></span></span></span><span class="pull-left col-xs-9 h3 mrgn-tp-md mrgn-bttm-0">Check status or update information</span></li>
+  <li data-wb-fieldflow='{"action": "append", "source": "#end-results"}'><span class="pull-left col-xs-3 max-content p-0"><span class="fa-stack fa-2x icon-display text-muted mrgn-tp-md"><span class="far fa-square fa-stack-2x" style="transform: rotate(45deg)"></span><span class="fas fa-hand-holding-usd fa-stack-1x"></span></span></span><span class="pull-left col-xs-9 h3 mrgn-tp-md mrgn-bttm-0">Get help with taxes, benefits, credits and savings plans</span></li>
 	<li><span class="pull-left col-xs-3 max-content p-0"><span class="fa-stack fa-2x icon-display text-muted mrgn-tp-md"><span class="far fa-square fa-stack-2x" style="transform: rotate(45deg)"></span><span class="fas fa-dollar-sign fa-stack-1x"></span></span></span><span class="pull-left col-xs-9 h3 mrgn-tp-md mrgn-bttm-0">Send or receive a payment</span>
   <div class="wb-fieldflow-sub">
  
@@ -244,19 +244,46 @@ body.wb-modal {
         <li>Sending a payment to the CRA
 		<div class="wb-fieldflow-sub">
     <p>What is sending the payment to the CRA?</p>
-<ul><li>Individual
+<ul><li>Individual payment
 <div class="wb-fieldflow-sub">
 	<p>What do you need help with regarding sending a payment to the CRA as an individual?</p>
  <ul>
-                <li>Find the right payment method</li>
-                <li>Find a due date for a payment</li>
-                <li data-wb-fieldflow='{"action": "toggle", "toggle": "#payments-confirm-correct"}'>Confirm or correct a payment</li>
-                <li>If you are unable to pay</li>
+                <li data-wb-fieldflow='{"action": "append", "source": "#end-results"}'>Find the right payment method</li>
+                <li data-wb-fieldflow='{"action": "append", "source": "#end-results"}'>Find a due date for a payment</li>
+                <li data-wb-fieldflow='{"action": "append", "source": "#end-results"}'>Confirm or correct a payment
+				<div class="wb-fieldflow-sub">
+	<p>Is this payment going towards a benefit?</p>
+ <ul>
+                <li  data-wb-fieldflow='{"action": "toggle", "toggle": "#payments-confirm-correct, #individual-confirm-correct"}'>No</li>
+                <li  data-wb-fieldflow='{"action": "toggle", "toggle": "#payments-confirm-correct, #benefit-confirm-correct"}'>Yes</li>
+            
+              </ul>
+            </div>
+				</li>
+                <li data-wb-fieldflow='{"action": "append", "source": "#end-results"}'>If you are unable to pay</li>
 	
               </ul>
             </div>
 
-</li><li>Business</li></ul>
+</li><li>Business payment<div class="wb-fieldflow-sub">
+	<p>What do you need help with regarding sending a payment to the CRA as a business?</p>
+ <ul>
+                <li data-wb-fieldflow='{"action": "append", "source": "#end-results"}'>Find the right payment method</li>
+                <li data-wb-fieldflow='{"action": "append", "source": "#end-results"}'>Find a due date for a payment</li>
+                <li data-wb-fieldflow='{"action": "toggle", "toggle": "#payments-confirm-correct, #business-confirm-correct"}'>Confirm or correct a payment</li>
+                <li data-wb-fieldflow='{"action": "append", "source": "#end-results"}'>If you are unable to pay</li>
+	
+              </ul>
+            </div></li><li>Non-resident payment<div class="wb-fieldflow-sub">
+	<p>What do you need help with regarding sending a payment to the CRA as an non-resident?</p>
+ <ul>
+                <li data-wb-fieldflow='{"action": "append", "source": "#end-results"}'>Find the right payment method</li>
+                <li data-wb-fieldflow='{"action": "append", "source": "#end-results"}'>Find a due date for a payment</li>
+                <li data-wb-fieldflow='{"action": "toggle", "toggle": "#payments-confirm-correct, , #non-res-confirm-correct"}'>Confirm or correct a payment</li>
+                <li data-wb-fieldflow='{"action": "append", "source": "#end-results"}'>If you are unable to pay</li>
+	
+              </ul>
+            </div></li></ul>
 		</div>
              
 		</li>
@@ -266,16 +293,21 @@ body.wb-modal {
       </ul>
     </div>
     </li>
-  <li><span class="pull-left col-xs-3 max-content p-0"><span class="fa-stack fa-2x icon-display text-muted mrgn-tp-md"><span class="far fa-square fa-stack-2x" style="transform: rotate(45deg)"></span><span class="fas fa-file-alt fa-stack-1x"></span></span></span><span class="pull-left col-xs-9 h3 mrgn-tp-md mrgn-bttm-0">Find, submit or receive documents</span></li>
-  <li><span class="pull-left col-xs-3 max-content p-0"><span class="fa-stack fa-2x icon-display text-muted mrgn-tp-md"><span class="far fa-square fa-stack-2x" style="transform: rotate(45deg)"></span><span class="fas fa-briefcase fa-stack-1x"></span></span></span><span class="pull-left col-xs-9 h3 mrgn-tp-md mrgn-bttm-0">Get help for your business</span></li>
-  <li><span class="pull-left col-xs-2 col-sm-2 max-content p-0"><span class="fa-stack fa-2x icon-display text-muted mrgn-tp-md"><span class="far fa-square fa-stack-2x" style="transform: rotate(45deg)"></span><span class="fas fa-question fa-stack-1x"></span></span></span><span class="pull-left col-xs-9 col-sm-10 h3">It's about something else</li>
+  <li data-wb-fieldflow='{"action": "append", "source": "#end-results"}'><span class="pull-left col-xs-3 max-content p-0"><span class="fa-stack fa-2x icon-display text-muted mrgn-tp-md"><span class="far fa-square fa-stack-2x" style="transform: rotate(45deg)"></span><span class="fas fa-file-alt fa-stack-1x"></span></span></span><span class="pull-left col-xs-9 h3 mrgn-tp-md mrgn-bttm-0">Find, submit or receive documents</span></li>
+  <li data-wb-fieldflow='{"action": "append", "source": "#end-results"}'><span class="pull-left col-xs-3 max-content p-0"><span class="fa-stack fa-2x icon-display text-muted mrgn-tp-md"><span class="far fa-square fa-stack-2x" style="transform: rotate(45deg)"></span><span class="fas fa-briefcase fa-stack-1x"></span></span></span><span class="pull-left col-xs-9 h3 mrgn-tp-md mrgn-bttm-0">Get help for your business</span></li>
+  <li data-wb-fieldflow='{"action": "append", "source": "#end-results"}'><span class="pull-left col-xs-2 col-sm-2 max-content p-0"><span class="fa-stack fa-2x icon-display text-muted mrgn-tp-md"><span class="far fa-square fa-stack-2x" style="transform: rotate(45deg)"></span><span class="fas fa-question fa-stack-1x"></span></span></span><span class="pull-left col-xs-9 col-sm-10 h3">It's about something else</li>
 </ul>
     </div>
 </form>
 
+<div id="end-results" class="hidden">
+	<p>Did you find the answer?</p>
+	<ul><li data-wb-fieldflow='{"action": "toggle", "toggle": "#end-yes"}'>Yes</li><li data-wb-fieldflow='{"action": "toggle", "toggle": "#end-no"}'>No</li></ul>
+		
 		<div aria-live="polite">
 <p id="payments-confirm-correct" class="results hidden fade in"><a href="#mid-screen-bg" aria-controls="mid-screen-bg"  role="button" class="wb-lbx btn btn-primary btn-lg h3 mrgn-tp-0 py-3 px-3">Here is how to confirm or correct a payment</a></p>
-			
+	<p id="end-yes" class="results hidden fade in"><a href="#mid-screen-yes" aria-controls="mid-screen-yes"  role="button" class="wb-lbx btn btn-primary btn-lg h3 mrgn-tp-0 py-3 px-3">Here is the answer to yes</a></p>
+			<p id="end-no" class="results hidden fade in"><a href="#mid-screen-no" aria-controls="mid-screen-no"  role="button" class="wb-lbx btn btn-primary btn-lg h3 mrgn-tp-0 py-3 px-3">Here is the answer to no</a></p>
 	<!--div id="payments-confirm-correct" class="hidden fade in">
 			<div class="panel brdr-rds-0 panel-info" role="region" aria-label="Answer">
                 <header class="panel-heading max-content brdr-rght brdr-bttm brdr-rds-0">
@@ -291,9 +323,25 @@ body.wb-modal {
     </section>
 </div>
  </div>
+<section id="mid-screen-yes" class="mfp-hide modal-dialog modal-content overlay-def wb-popup-mid max-content">
+<header class="modal-header">
+	<h2 class="modal-title">Result for yes</h2>
+</header>
+<div class="modal-body container">
+	<p>You have reached the end, thank you.</p>
+</div>
+</section>
+<section id="mid-screen-no" class="mfp-hide modal-dialog modal-content overlay-def wb-popup-mid max-content">
+<header class="modal-header">
+	<h2 class="modal-title">Result for no</h2>
+</header>
+<div class="modal-body container">
+	<p>You have reached the end, thank you.</p>
+</div>
+</section>
 <section id="mid-screen-bg" class="mfp-hide modal-dialog modal-content overlay-def wb-popup-mid max-content">
 <header class="modal-header">
-	<h2 class="modal-title">Result</h2>
+	<h2 class="modal-title">Result for confirming or correcting a payment</h2>
 </header>
 <div class="modal-body container">
 	<div class="wb-tabs ignore-session">
@@ -326,10 +374,9 @@ body.wb-modal {
                 <details id="details-panel2" class="wb-details-close">
                     <summary class="py-3"><span class="px-3 center-block"><span class="fas fa-lg fa-phone-alt px-1"></span><br class="hidden-xs hidden-sm">
                             By phone</span></summary>
-                    <details class="mrgn-tp-lg">
-                        <summary class="py-2">
+                    <div id="individual-confirm-correct" class="hidden">
                             <h4>Individual tax account</h4>
-                        </summary>
+                       
                         <div id="ajax-before">
                             <h5>Information you will need before you call</h5>
                             <ul class="fa-ul">
@@ -422,11 +469,10 @@ body.wb-modal {
                                 </details>
                             </li>
                         </ul>
-                    </details>
-                    <details class="mrgn-tp-lg">
-                        <summary class="py-2">
+					</div>
+                   <div id="benefit-confirm-correct" class="hidden">
                             <h4>Benefit account</h4>
-                        </summary>
+                    
                         <div data-ajax-replace="#ajax-before"> </div>
                         <h5>Phone number</h5>
                         <p><span class="fas fa-phone-square-alt fa-3x fa-pull-left mrgn-rght-md mrgn-bttm-md"></span> <span class="wb-inv">All of Canada and United States except Yukon, Northwest Territories and
@@ -458,11 +504,10 @@ body.wb-modal {
                             <li data-ajax-replace="#ajax-territories"> </li>
                             <li data-ajax-replace="#ajax-accessibility"> </li>
                         </ul>
-                    </details>
-                    <details class="mrgn-tp-lg">
-                        <summary class="py-2">
+				   </div>
+                    <div id="business-confirm-correct" class="hidden">
                             <h4>Business account</h4>
-                        </summary>
+                   
 
                         <h5>Information you will need before you call</h5>
                         <ul class="fa-ul">
@@ -531,11 +576,10 @@ body.wb-modal {
                                 </details>
                             </li>
                         </ul>
-                    </details>
-                    <details class="mrgn-tp-lg mrgn-bttm-lg">
-                        <summary class="py-2">
+					</div>
+                    <div id="non-res-confirm-correct" class="hidden">
                             <h4>Part XIII non-resident withholding accounts</h4>
-                        </summary>
+           
 
                         <h5>Information you will need before you call</h5>
                         <ul class="fa-ul">
@@ -595,7 +639,7 @@ body.wb-modal {
                                 </details>
                             </li>
                         </ul>
-                    </details>
+					</div>
                 </details>
             </div>
         </div>
