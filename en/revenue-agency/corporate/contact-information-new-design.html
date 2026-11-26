@@ -56,9 +56,11 @@ body.wb-modal {
 	grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 #interactive-contact fieldset.wb-fieldflow-init, .results {
-	scroll-margin-bottom: 2em;
+	scroll-margin-bottom: 1.6em;
 }
- @media screen and (min-width: 768px) {    
+
+ @media screen and (min-width: 768px) {   
+	 .fa-2x {font-size: 1.8em;}
 	#interactive-contact fieldset:first-of-type {
     column-gap: 10px;
     display: grid;
@@ -71,7 +73,9 @@ body.wb-modal {
  grid-column-end: span 2;} 
  } 
        
-    
+   @media screen and (min-width: 992px) { 
+ .fa-2x {font-size: 2em;}
+   }
 
              
       
