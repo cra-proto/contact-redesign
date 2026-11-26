@@ -227,7 +227,7 @@ body.wb-modal {
 		<p>Get online, phone and other assistance by letting us know what issue you are having.</p>
 		<p class="h3" id="loading"><span class="fas fa-spinner fa-pulse mrgn-rght-sm"></span>Loading</p>
 <form id="interactive-contact" class="hidden">
-   <div class="wb-fieldflow"  data-wb-fieldflow='{"noForm": true, "isoptional": true, "renderas": "radio", "unhideelm": "#interactive-contact", "hideelm": "#loading", "base": {"isoptional": true, "renderas": "radio", "gcChckbxrdio": true, "live": true}, "reset": {"action":"addClass", "source": ".results", "class": "bg-info", "live": true}}'>
+   <div class="wb-fieldflow"  data-wb-fieldflow='{"noForm": true, "isoptional": true, "renderas": "radio", "unhideelm": "#interactive-contact", "hideelm": "#loading", "base": {"isoptional": true, "renderas": "radio", "gcChckbxrdio": true, "live": true}, "default": {"action":"addClass", "source": ".results", "class": "hidden", "live": true}}'>
   <p>What do you want to do?</p>  
 <ul>
   <li data-wb-fieldflow='{"action": "append", "source": "#end-results"}'><span class="pull-left col-xs-3 max-content p-0"><span class="fa-stack fa-2x icon-display text-muted mrgn-tp-md"><span class="far fa-square fa-stack-2x" style="transform: rotate(45deg)"></span><span class="fas fa-user-lock fa-sm fa-stack-1x"></span></span></span><span class="pull-left col-xs-9 h3 mrgn-tp-md mrgn-bttm-0">Get help accessing your CRA account</span></li>
@@ -265,7 +265,7 @@ body.wb-modal {
     </div>
 </form>
 
-<div id="end-results" class="hidden" data-wb-fieldflow='{"reset": {"action":"addClass", "source": ".results", "class": "bg-info", "live": true}}'>
+<div id="end-results" class="hidden" data-wb-fieldflow='{"default": {"action":"addClass", "source": ".results", "class": "hidden", "live": true}}'>
 	<p>Did you find the answer?</p>
 	<ul><li data-wb-fieldflow='{"action": "toggle", "toggle": "#end-yes"}'>Yes</li><li data-wb-fieldflow='{"action": "toggle", "toggle": "#end-no"}'>No</li></ul>
 </div>
