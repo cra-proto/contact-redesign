@@ -33,9 +33,9 @@ $(document).ready(function () {
             // mouse, touch, or pen
             console.log("Mouse/Finger/Pen click detected");
              const selectedRadio = this;
-//const visResult = selectedRadio.closest('.results').filter(':visible');
+const visResult = selectedRadio.closest('.results').filter(':visible');
          
-        const currentFieldset = selectedRadio.closest("fieldset, .results:visible");
+        const currentFieldset = selectedRadio.closest("fieldset, " +  visResult);
              setTimeout(function () {
             focusNewFieldset(
                 currentFieldset
