@@ -1,17 +1,33 @@
- function focusNewFieldset(currentFieldset) {
+// Visible = has .visible, or does not have .hidden
+function isShown() {
+    const $el = $(this);
+    return $el.hasClass("visible") || !$el.hasClass("hidden");
+}
+
+function focusNewFieldset(currentFieldset) {
+    // First visible fieldset after the current one
     let $target = $(currentFieldset)
-        .closest('fieldset')
-        .next('fieldset');
-//If not fieldset scroll, target results
+        .closest("fieldset")
+        .nextAll("fieldset")
+        .filter(isShown)
+        .first();
+
+    // If none, first visible .results in the DOM
     if (!$target.length) {
-        $target = $('.results');
+        $target = $(".results").filter(isShown).first();
     }
-//If neither, stop here
+
+    // If neither, stop
     if (!$target.length) {
         return;
     }
 
-    $target.focus();
+    // Make sure non-focusable containers can receive focus
+    if (!$target.is("[tabindex]")) {
+        $target.attr("tabindex", "-1");
+    }
+
+    $target.trigger("focus");
 
     const reduceMotion = window.matchMedia(
         "(prefers-reduced-motion: reduce)"
@@ -22,30 +38,18 @@
         block: "nearest"
     });
 }
-    
-    
-    $( ".wb-fieldflow" ).on( "wb-ready.wb-fieldflow", function( event ) {
-$(document).ready(function () {
-    $(document).on('click keydown', '.radio, input[type="radio"]', function(e) {
-        const oe = e.originalEvent;
 
-        if (oe && oe.pointerType || e.key === "Tab") {
-            // mouse, touch, or pen
-            console.log("Mouse/Finger/Pen click detected");
-             const selectedRadio = this;
-const visResult = selectedRadio.closest('.results').filter(':visible');
-         
-        const currentFieldset = selectedRadio.closest("fieldset, " +  visResult);
-             setTimeout(function () {
-            focusNewFieldset(
-                currentFieldset
-            );
+// Bind once, outside wb-ready
+$(document).on("click keydown", ".radio, input[type='radio']", function (e) {
+    const oe = e.originalEvent;
+
+    if ((oe && oe.pointerType) || e.key === "Tab") {
+        const currentFieldset = $(this).closest("fieldset");
+
+        setTimeout(function () {
+            focusNewFieldset(currentFieldset);
         }, 500);
-        } else {
-            // pointerType is "" for keyboard (Enter/Space), or the
-            // event isn't a PointerEvent at all
-            console.log("Keyboard or other input");
-        }
-    });
-});			
-    });
+    } else {
+        console.log("Keyboard or other input");
+    }
+});
