@@ -23,9 +23,9 @@ function focusNewFieldset(currentFieldset) {
     }
 
     // Make sure non-focusable containers can receive focus
-    if (!$target.is("[tabindex]")) {
-       $target.attr("tabindex", "-1");
-   }
+   // if (!$target.is("[tabindex]")) {
+   //    $target.attr("tabindex", "-1");
+//   }
 
   //  $target.trigger("focus");
 
