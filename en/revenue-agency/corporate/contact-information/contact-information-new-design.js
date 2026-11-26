@@ -24,15 +24,19 @@ function focusNewFieldset(currentFieldset) {
 
     // Make sure non-focusable containers can receive focus
     if (!$target.is("[tabindex]")) {
-        $target.attr("tabindex", "-1");
-    }
+       $target.attr("tabindex", "-1");
+   }
 
-    $target.trigger("focus");
+  //  $target.trigger("focus");
 
     const reduceMotion = window.matchMedia(
         "(prefers-reduced-motion: reduce)"
     ).matches;
 
+ // Focus without the browser's instant scroll
+    $target[0].focus({ preventScroll: true });
+
+    
     $target[0].scrollIntoView({
         behavior: reduceMotion ? "auto" : "smooth",
         block: "nearest"
